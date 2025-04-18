@@ -6,13 +6,15 @@
   <header class="header">
     <nav>
       <ul>
-    
-        <RouterLink to="/">   <li>HOME</li></RouterLink>
-        <RouterLink to="/experience">   <li>EXPERIENCE</li></RouterLink>
-    
-     
-        <li>PROJECTS</li>
-        <li>CONTACT</li>
+        <li>
+          <RouterLink to="/" active-class="active" class="nav-link">   HOME</RouterLink>
+        </li>
+        <li>
+          <RouterLink to="/experience" active-class="active" class="nav-link">   EXPERIENCE</RouterLink>
+        </li>
+        <li>
+          <RouterLink to="/projects" active-class="active" class="nav-link">   PROJECTS</RouterLink>
+        </li>
       </ul>
     </nav>
   </header>
@@ -31,15 +33,23 @@ nav ul {
   list-style: none;
   padding-top: 10px;
 }
+.header a{
+  text-decoration: none;
+}
 
-nav li {
+.nav-link {
   color: white;
   font-size: 18px;
   cursor: pointer;
+  text-decoration: none;
 }
 
-nav li.active {
+
+.active{
   color: orange;
+  border-bottom: 2px solid orange;
+  padding-right: 5px;
+  padding-left: 5px;
 }
 </style>
 

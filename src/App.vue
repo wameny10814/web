@@ -1,13 +1,15 @@
 <script setup>
 import Header from './components/Header.vue';
-import MyHome from './components/MyHome.vue';
 
 
 </script>
 
-<template >
+<template>
   <div class="app">
+
+
     <Header />
+
     <RouterView />
   </div>
 </template>
@@ -23,8 +25,9 @@ import MyHome from './components/MyHome.vue';
   flex-direction: column;
   justify-content: center;
 }
+
 body {
-    display: block;
-    margin: 0px;
+  display: block;
+  margin: 0px;
 }
 </style>

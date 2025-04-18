@@ -1,6 +1,6 @@
 <script setup>
 import { ref, onMounted } from 'vue';
-import { FontAwesomeIcon, } from '@fortawesome/vue-fontawesome';
+import Header from './Header.vue';
 
 const projects = ref([
   {
@@ -33,7 +33,7 @@ onMounted(() => {
       }
     },
     {
-      threshold: 0.8, // 30% 可視區出現才觸發
+      threshold: 0.8, // 80% 可視區出現才觸發
     }
   );
 
@@ -51,11 +51,13 @@ onMounted(() => {
     <section class="intro">
       <img class="avatar" src="../assets/avatar.png" alt="avatar" />
       <div class="intro-text">
-        >
-        <p>Hi！I'm YuvChen, <br />Nice to Meet you.</p>
+
+        <p>Hi! I’m YuChen, <br> front-end engineer driven by the joy of discovery.</p>
 
 
-        <p>I’m also a web developer. <br />Please feel free to check the experience and projects.</p>
+        <p>
+          My curiosity for the unknown guided me into the garden of front-end — where logic meets creativity, and ideas
+          come to life.</p>
       </div>
     </section>
     <section class="projects">
@@ -80,7 +82,6 @@ onMounted(() => {
     </section>
     <section class="skills" ref="skillSection">
       <h2 class="skills-title">PROFESSIONAL</h2>
-      <button @click="show = !show">Toggle</button>
 
 
       <TransitionGroup name="fade" tag="div" class="skills-grid">
@@ -98,21 +99,14 @@ onMounted(() => {
 
     <section class="contact">
       <h2 class="contact-title">CONTACT ME</h2>
-      <div class="contact-form">
-        <form>
-          <input type="text" placeholder="NAME" />
-          <input type="email" placeholder="E-MAIL" />
-          <textarea placeholder="CONTEXT"></textarea>
-          <button type="submit">SUBMIT</button>
-        </form>
-        <div class="diverder"></div>
-        <div class="contact-info">
-          <p>E-mail: wameny10814@gmail.com</p>
+
+      <div class="contact-info">
+        <p>E-mail: wameny10814@gmail.com</p>
 
 
-          <p>GitHub: <a href="https://github.com/YuvChen10814">https://github.com/YuvChen10814</a></p>
-        </div>
+        <p>GitHub: <a href="https://github.com/YuvChen10814">https://github.com/YuvChen10814</a></p>
       </div>
+
     </section>
 
   </div>
@@ -147,13 +141,16 @@ onMounted(() => {
 .intro-text p {
   font-size: 24px;
   line-height: 2;
+  color: black;
 }
 
 .projects {
   background-color: rgba(217, 217, 217, 0.38);
   padding: 60px 20px;
   text-align: center;
+  border-top: 1px solid #fff;
 }
+
 
 .project-title {
   font-size: 36px;
@@ -174,6 +171,7 @@ onMounted(() => {
   height: 200px;
 
 }
+
 .project-card:hover {
   transform: scale(1.2);
   transition: all 0.5s ease-in-out;
@@ -187,7 +185,6 @@ onMounted(() => {
 
 .skills-title {
   border-top: 1px solid #fff;
-  border-bottom: 1px solid #fff;
   font-size: 36px;
   font-weight: bold;
   margin-bottom: 5rem;
@@ -242,7 +239,7 @@ onMounted(() => {
 .contact-title {
   position: absolute;
   top: -50px;
-  left: 35%;
+  left: 40%;
   /* color: #fff; */
   font-size: 32px;
   font-weight: bold;
@@ -288,6 +285,8 @@ button {
 
 .contact-info {
   text-align: left;
+  display: flex;
+  justify-content: space-around;
 }
 
 .contact-info p {

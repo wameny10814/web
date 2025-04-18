@@ -18,9 +18,9 @@
 
 <script setup>
 import { ref, onMounted, onUnmounted, computed, watch } from 'vue'
-
+import { nextTick } from 'vue'
 const props = defineProps({
-    displayed: null, // 若要支持 slot 傳內容，可不用這個
+    displayed: null,
     height: String
 })
 
@@ -36,6 +36,8 @@ const updateProgress = () => {
     const containerTop = container.value.offsetTop
     const containerHeightNumber = container.value.offsetHeight
     const innerHeight = window.innerHeight
+
+   
 
     const newProgress =
         ((scrollTop - containerTop) * 100) / (containerHeightNumber - innerHeight)
@@ -54,13 +56,14 @@ const computedTransform = computed(() => {
     return `translateX(-${currentTranslate}%)`
 })
 
+//計算畫面開始滾之前不動，開始滾動之後固定位置
 const computedPosition = computed(() => {
     if (progress.value < 0) return 'static'
     if (progress.value <= 100) return 'fixed'
     return 'absolute'
 })
 
-onMounted(() => {
+onMounted(async () => {
     const innerHeight = window.innerHeight
     const innerWidth = window.innerWidth
     const dw = displayedWrapper.value.offsetWidth
@@ -73,8 +76,12 @@ onMounted(() => {
         containerHeight.value = props.height
     }
 
+    await nextTick() // 等畫面渲染完畢!!!
+
     window.scrollTo(0, 1)
+    requestAnimationFrame(() => {
     updateProgress()
+  })
     window.addEventListener('scroll', updateProgress)
 })
 

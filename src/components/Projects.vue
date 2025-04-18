@@ -3,7 +3,6 @@ import { ref, onMounted, onUnmounted } from 'vue'
 import react from '../assets/react.png'
 import resume from '../assets/resume.png'
 import cut from '../assets/cut.png'
-import { faHashtag } from '@fortawesome/free-solid-svg-icons'
 
 const projectRefs = []
 const activeIndex = ref(0)

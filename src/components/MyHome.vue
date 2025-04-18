@@ -104,7 +104,7 @@ onMounted(() => {
         <p>E-mail: wameny10814@gmail.com</p>
 
 
-        <p>GitHub: <a href="https://github.com/YuvChen10814">https://github.com/YuvChen10814</a></p>
+        <p>GitHub: <a href="https://github.com/wameny10814">https://github.com/wameny10814</a></p>
       </div>
 
     </section>

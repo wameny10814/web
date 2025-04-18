@@ -24,8 +24,8 @@ const projects = ref([
         image: resume,
         text: "以vue3 composition api實作個人履歷網站，包含首頁、經歷、作品集等頁面。",
         projectname: 'YuChen 個人履歷網站',
-        frontlink: 'https://github.com/wameny10814/resumeredux',
-        demolink: 'https://wameny10814.github.io/resumeredux/',
+        frontlink: 'https://github.com/wameny10814/web',
+        demolink: 'https://wameny10814.github.io/web/',
         fronttext: '前端程式碼',
         hashtag:'#VUE3 #VITE #VUE-ROUTE'
        

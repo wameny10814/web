@@ -74,7 +74,7 @@ onMounted(() => {
           </a>
         </div>
         <div class="project-card">
-          <a href="https://wameny10814.github.io/resume_css01/">
+          <a href="https://wameny10814.github.io/web/">
             <img src="../assets/resume.png" alt="project3" />
           </a>
         </div>
@@ -330,4 +330,93 @@ button {
   opacity: 1;
   transform: translateY(0);
 }
+
+@media (max-width: 1024px) {
+  .intro {
+    flex-direction: column;
+    gap: 30px;
+    padding: 10%;
+    text-align: center;
+  }
+
+  .intro-text p {
+    font-size: 20px;
+  }
+
+  .project-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-card {
+    width: 90%;
+    height: auto;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .skill-item{
+      margin: 0 10%;
+  }
+
+  .contact-info {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .contact-title {
+    left: 25%;
+    font-size: 24px;
+  }
+
+  form {
+    width: 80%;
+  }
+}
+
+@media (max-width: 600px) {
+  .avatar {
+    width: 200px;
+    height: 200px;
+  }
+
+  .intro-text p {
+    font-size: 18px;
+  }
+
+  .project-title,
+  .skills-title,
+  .contact-title {
+    font-size: 24px;
+    margin-bottom: 2rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skill-item {
+    font-size: 16px;
+    margin: 0 10%;
+  }
+
+  .contact {
+    margin: 5%;
+    padding: 40px 20px;
+    margin-top:30%;
+  }
+
+  .contact-title {
+    left: 15%;
+  }
+
+  .contact-info p,
+  .contact-info a {
+    font-size: 14px;
+  }
+}
+
 </style>

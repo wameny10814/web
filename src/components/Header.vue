@@ -51,6 +51,47 @@ nav ul {
   padding-right: 5px;
   padding-left: 5px;
 }
+
+@media (max-width: 768px) {
+   .header {
+    padding: 10px;
+    background: rgba(217, 217, 217, 0.38);
+    padding: 60px 30px;
+    text-align: center;
+    margin: 10%;
+    position: relative;
+    border: 1px solid #fff;
+    border-radius: 10px;
+  }
+  nav ul {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    padding: 0;
+  }
+
+  .nav-link {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 10px;
+    background: rgba(217, 217, 217, 0.38);
+    padding: 60px 30px;
+    text-align: center;
+    margin: 10%;
+    position: relative;
+    border: 1px solid #fff;
+    border-radius: 10px;
+  }
+
+  .nav-link {
+    font-size: 14px;
+  }
+}
+
 </style>
 
 
